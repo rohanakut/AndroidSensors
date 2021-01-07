@@ -149,6 +149,57 @@ class Testandroidsensor2 {
     return [version];
   }
 
+  // static Future<String> get initialiseAmbientTemperatureSensorFunc async {
+  //   final String isInitialised =
+  //       await _channel.invokeMethod('initialiseAmbientTemperatureSensor');
+  //   return isInitialised;
+  // }
+
+  // static Future<List<double>> get ambientTemperatureReading async {
+  //   final List<dynamic> versionList =
+  //       await _channel.invokeMethod('getAmbientTemperatureValue');
+  //   double version = 5, version1, version2;
+  //   versionList.map((e) => print(e));
+  //   print(versionList.length);
+  //   version = versionList[0];
+  //   print("the version is $version");
+  //   return [version];
+  // }
+
+  static Future<String> get initialiseLightSensorFunc async {
+    final String isInitialised =
+        await _channel.invokeMethod('initialiseLightSensor');
+    return isInitialised;
+  }
+
+  static Future<List<double>> get lightReading async {
+    final List<dynamic> versionList =
+        await _channel.invokeMethod('getLightValue');
+    double version = 5, version1, version2;
+    versionList.map((e) => print(e));
+    print(versionList.length);
+    version = versionList[0];
+    print("the version is $version");
+    return [version];
+  }
+
+  // static Future<String> get initialiseTemperatureSensorFunc async {
+  //   final String isInitialised =
+  //       await _channel.invokeMethod('initialiseTemperatureSensor');
+  //   return isInitialised;
+  // }
+
+  // static Future<List<double>> get temperatureReading async {
+  //   final List<dynamic> versionList =
+  //       await _channel.invokeMethod('getTemperatureValue');
+  //   double version = 5, version1, version2;
+  //   versionList.map((e) => print(e));
+  //   print(versionList.length);
+  //   version = versionList[0];
+  //   print("the version is $version");
+  //   return [version];
+  // }
+
   static Stream<double> get sensorData {
     if (sendValue == null) {
       sendValue = _eventChannel.receiveBroadcastStream().map((event) => event);

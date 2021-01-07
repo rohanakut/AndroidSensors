@@ -68,6 +68,9 @@ public class Testandroidsensor2Plugin implements FlutterPlugin, MethodCallHandle
   float linearAccelerationValue1,linearAccelerationValue2,linearAccelerationValue3;
   float typeRotationValue1,typeRotationValue2,typeRotationValue3;
   float stepCounterValue1;
+  float ambientTemperatureValue1;
+  float lightValue1;
+  float temperatureValue1;
 /*  private Testandroidsensor2Plugin(Activity activity, MethodChannel channel){
     this.activity = activity;
     this.channel = channel;
@@ -198,6 +201,36 @@ public Sensor InitialiseTypeGameSensor(){
      args.add(stepCounterValue1);
      result.success(args);
    }
+   if(call.method.equals("initialiseAmbientTemperatureSensor")){
+    sensorManager = (SensorManager) mContext.getSystemService(mContext.SENSOR_SERVICE);
+    Sensor rotationVector = sensorManager.getDefaultSensor(Sensor.TYPE_AMBIENT_TEMPERATURE);
+   sensorManager.registerListener(Testandroidsensor2Plugin.this,rotationVector,SensorManager.SENSOR_DELAY_NORMAL);
+  }
+  if(call.method.equals("getAmbientTemperatureValue")){
+    ArrayList<Float> args = new ArrayList<>();
+     args.add(ambientTemperatureValue1);
+     result.success(args);
+   }
+   if(call.method.equals("initialiseLightSensor")){
+    sensorManager = (SensorManager) mContext.getSystemService(mContext.SENSOR_SERVICE);
+    Sensor rotationVector = sensorManager.getDefaultSensor(Sensor.TYPE_LIGHT);
+   sensorManager.registerListener(Testandroidsensor2Plugin.this,rotationVector,SensorManager.SENSOR_DELAY_NORMAL);
+  }
+   if(call.method.equals("getLightValue")){
+    ArrayList<Float> args = new ArrayList<>();
+     args.add(lightValue1);
+     result.success(args);
+   }
+  if(call.method.equals("initialiseTemperatureSensor")){
+    sensorManager = (SensorManager) mContext.getSystemService(mContext.SENSOR_SERVICE);
+    Sensor rotationVector = sensorManager.getDefaultSensor(Sensor.TYPE_TEMPERATURE);
+   sensorManager.registerListener(Testandroidsensor2Plugin.this,rotationVector,SensorManager.SENSOR_DELAY_NORMAL);
+  }
+  if(call.method.equals("getTemperatureValue")){
+    ArrayList<Float> args = new ArrayList<>();
+     args.add(temperatureValue1);
+     result.success(args);
+   }
   else {
       result.notImplemented();
     }
@@ -249,6 +282,18 @@ public Sensor InitialiseTypeGameSensor(){
     if(sensorEvent.sensor.getType() == Sensor.TYPE_STEP_COUNTER){
       stepCounterValue1 = sensorEvent.values[0];
       
+    }
+    if(sensorEvent.sensor.getType() == Sensor.TYPE_AMBIENT_TEMPERATURE){
+     ambientTemperatureValue1 = sensorEvent.values[0];
+      
+    }
+    if(sensorEvent.sensor.getType() == Sensor.TYPE_LIGHT){
+      lightValue1 = sensorEvent.values[0];
+       
+    }
+    if(sensorEvent.sensor.getType() == Sensor.TYPE_TEMPERATURE){
+      temperatureValue1 = sensorEvent.values[0];
+       
     }
   }
   @Override

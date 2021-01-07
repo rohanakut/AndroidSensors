@@ -96,6 +96,37 @@ class _MyAppState extends State<MyApp> {
     });
   }
 
+  // Future<String> initialiseAmbientTemperatureSensor() async {
+  //   String isInitialised;
+  //   await Testandroidsensor2.initialiseAmbientTemperatureSensorFunc
+  //       .then((value) {
+  //     setState(() {
+  //       isInitialised = value;
+  //       print(isInitialised);
+  //     });
+  //   });
+  // }
+
+  Future<String> initialiseLightSensor() async {
+    String isInitialised;
+    await Testandroidsensor2.initialiseLightSensorFunc.then((value) {
+      setState(() {
+        isInitialised = value;
+        print(isInitialised);
+      });
+    });
+  }
+
+  // Future<String> initialiseTemperatureSensor() async {
+  //   String isInitialised;
+  //   await Testandroidsensor2.initialiseTemperatureSensorFunc.then((value) {
+  //     setState(() {
+  //       isInitialised = value;
+  //       print(isInitialised);
+  //     });
+  //   });
+  // }
+
   @override
   Widget build(BuildContext context) {
     // initSensorState();
@@ -249,6 +280,51 @@ class _MyAppState extends State<MyApp> {
                 },
                 child: Text("Get Step Counter Value"),
               ),
+              // RaisedButton(
+              //     onPressed: () {
+              //       initialiseAmbientTemperatureSensor();
+              //     },
+              //     child: Text("initialise Ambient Temperature Sensor")),
+              // RaisedButton(
+              //   onPressed: () {
+              //     Testandroidsensor2.ambientTemperatureReading.then((value) {
+              //       setState(() {
+              //         typeGameValue1 = value[0];
+              //       });
+              //     });
+              //   },
+              //   child: Text("Get Ambient Temperature Value"),
+              // ),
+              RaisedButton(
+                  onPressed: () {
+                    initialiseLightSensor();
+                  },
+                  child: Text("initialise Light Sensor")),
+              RaisedButton(
+                onPressed: () {
+                  Testandroidsensor2.lightReading.then((value) {
+                    setState(() {
+                      typeGameValue1 = value[0];
+                    });
+                  });
+                },
+                child: Text("Get Light Value"),
+              ),
+              // RaisedButton(
+              //     onPressed: () {
+              //       initialiseTemperatureSensor();
+              //     },
+              //     child: Text("initialise Temperature Sensor")),
+              // RaisedButton(
+              //   onPressed: () {
+              //     Testandroidsensor2.temperatureReading.then((value) {
+              //       setState(() {
+              //         typeGameValue1 = value[0];
+              //       });
+              //     });
+              //   },
+              //   child: Text("Get Temperature Value"),
+              // ),
             ])),
       ),
     );
