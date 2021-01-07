@@ -9,7 +9,7 @@ that have not been implemented in his package. This is because most of the mobil
 
 Currently the sensors give a single value as an output. I am working on giving our streams of sensor values and it will be given in the susequent versions. 
 In order to get the sensor values first initialise the sensor. **The sensor needs to be initialised only once.**
-Once the sensor is initialised the value can be accessed at any time. 
+Once the sensor is initialised the value can be accessed at any time. Refer example for detailed implementation.
 
 Things to be completed in the subsequent Versions:
 1. Implement the stream for every sensor
