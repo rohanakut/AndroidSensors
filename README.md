@@ -22,7 +22,7 @@ For example if I want to get the values of accelerometer just once I would perfo
 1. Call the function initialiseAccelerometerSensorFunc present in the AllMobileSensor class. Once the sensor is initialised we can get its values whenever we want.
 2. To get the values of the sensor call the function accelerometerReading present in AllMobileSensor class. We will get three values for the accelerometer sensor.
 
-Refer example for further explanation.
+Refer example for further explanation. **To get a list of all sensor functions refer to the file named SensorActivities**
 
 ## Things to be completed
 1. Add Streams for every sensor
