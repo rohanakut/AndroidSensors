@@ -14,7 +14,7 @@ In order to use this package add "" in the pubspec.yaml.
 
 ## How to use individual sensors
 Currently the implementation of sensors does not support streams. This means continuous sensor values cannot be obtained for a particular sensor. However to obtain the individual values of a sensor perform the following steps:
-1. Initialise the sensor(the initialisation has to be done just once)
+1. Initialise the sensor**(the initialisation has to be done just once)**
 2. Once the sensor is initialised you can get the values of a sensor.
 
 ## Demo
