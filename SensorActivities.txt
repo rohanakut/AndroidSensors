@@ -1,0 +1,33 @@
+All functions for reference
+
+Type Game Rotation Sensor:
+Initialisation Function: initialiseTypeGameSensorFunc
+Obtaining Values Function: typeGameReading
+
+Gravity Sensor:
+Initialisation Function: initialiseGravitySensorFunc
+Obtaining Values Function: gravityReading
+
+Accelerometer Sensor:
+Initialisation Function: initialiseAccelerometerSensorFunc
+Obtaining Values Function: accelerometerReading
+
+Gyroscope Sensor:
+Initialisation Function: initialiseGyroscopeSensorFunc
+Obtaining Values Function: gyroscopeReading
+
+Linear Acceleration Sensor:
+Initialisation Function: initialiseLinearAccelerationSensorFunc
+Obtaining Values Function: linearAccelerationReading
+
+Type Rotation Sensor:
+Initialisation Function: initialiseTypeRotationSensorFunc
+Obtaining Values Function: typeRotationReading
+
+Step Counter Sensor:
+Initialisation Function: initialiseStepCounterSensorFunc
+Obtaining Values Function: stepCounterReading
+
+Light Sensor:
+Initialisation Function: initialiseLightSensorFunc
+Obtaining Values Function: lightReading
