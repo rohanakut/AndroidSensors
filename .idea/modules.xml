@@ -2,9 +2,9 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/androidSensors.iml" filepath="$PROJECT_DIR$/androidSensors.iml" />
-      <module fileurl="file://$PROJECT_DIR$/android/androidSensors_android.iml" filepath="$PROJECT_DIR$/android/androidSensors_android.iml" />
-      <module fileurl="file://$PROJECT_DIR$/example/android/androidSensors_example_android.iml" filepath="$PROJECT_DIR$/example/android/androidSensors_example_android.iml" />
+      <module fileurl="file://$PROJECT_DIR$/all_mobile_sensors.iml" filepath="$PROJECT_DIR$/all_mobile_sensors.iml" />
+      <module fileurl="file://$PROJECT_DIR$/android/all_mobile_sensors_android.iml" filepath="$PROJECT_DIR$/android/all_mobile_sensors_android.iml" />
+      <module fileurl="file://$PROJECT_DIR$/example/android/all_mobile_sensors_example_android.iml" filepath="$PROJECT_DIR$/example/android/all_mobile_sensors_example_android.iml" />
     </modules>
   </component>
 </project>

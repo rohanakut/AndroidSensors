@@ -1,4 +1,4 @@
-# androidSensors
+# all_mobile_sensors
 
 A new Flutter plugin.
 

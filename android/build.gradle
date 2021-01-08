@@ -1,4 +1,4 @@
-group 'com.example.androidSensors'
+group 'com.example.all_mobile_sensors'
 version '1.0'
 
 buildscript {

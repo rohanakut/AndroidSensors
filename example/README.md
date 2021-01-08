@@ -1,6 +1,6 @@
-# androidSensors_example
+# all_mobile_sensors_example
 
-Demonstrates how to use the androidSensors plugin.
+Demonstrates how to use the all_mobile_sensors plugin.
 
 ## Getting Started
 

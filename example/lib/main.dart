@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'dart:async';
 
 import 'package:flutter/services.dart';
-import 'package:androidSensors/androidSensors.dart';
+import 'package:all_mobile_sensors/all_mobile_sensors.dart';
 
 void main() {
   runApp(MyApp());
@@ -25,7 +25,7 @@ class _MyAppState extends State<MyApp> {
 
   void initialiseTypeGameSensor() async {
     String isInitialised;
-    await AndroidSensors.initialiseTypeGameSensorFunc.then((value) {
+    await AllMobileSensors.initialiseTypeGameSensorFunc.then((value) {
       setState(() {
         isInitialised = value;
         print(isInitialised);
@@ -35,7 +35,7 @@ class _MyAppState extends State<MyApp> {
 
   void initialiseGravitySensor() async {
     String isInitialised;
-    await AndroidSensors.initialiseGravitySensorFunc.then((value) {
+    await AllMobileSensors.initialiseGravitySensorFunc.then((value) {
       setState(() {
         isInitialised = value;
         print(isInitialised);
@@ -45,7 +45,7 @@ class _MyAppState extends State<MyApp> {
 
   void initialiseAccelerometerSensor() async {
     String isInitialised;
-    await AndroidSensors.initialiseAccelerometerSensorFunc.then((value) {
+    await AllMobileSensors.initialiseAccelerometerSensorFunc.then((value) {
       setState(() {
         isInitialised = value;
         print(isInitialised);
@@ -55,7 +55,7 @@ class _MyAppState extends State<MyApp> {
 
   void initialiseGyroscopeSensor() async {
     String isInitialised;
-    await AndroidSensors.initialiseGyroscopeSensorFunc.then((value) {
+    await AllMobileSensors.initialiseGyroscopeSensorFunc.then((value) {
       setState(() {
         isInitialised = value;
         print(isInitialised);
@@ -65,7 +65,7 @@ class _MyAppState extends State<MyApp> {
 
   void initialiseLinearAccelerationSensor() async {
     String isInitialised;
-    await AndroidSensors.initialiseLinearAccelerationSensorFunc.then((value) {
+    await AllMobileSensors.initialiseLinearAccelerationSensorFunc.then((value) {
       setState(() {
         isInitialised = value;
         print(isInitialised);
@@ -75,7 +75,7 @@ class _MyAppState extends State<MyApp> {
 
   void initialiseTypeRotationSensor() async {
     String isInitialised;
-    await AndroidSensors.initialiseTypeRotationSensorFunc.then((value) {
+    await AllMobileSensors.initialiseTypeRotationSensorFunc.then((value) {
       setState(() {
         isInitialised = value;
         print(isInitialised);
@@ -85,7 +85,7 @@ class _MyAppState extends State<MyApp> {
 
   void initialiseStepCounterSensor() async {
     String isInitialised;
-    await AndroidSensors.initialiseStepCounterSensorFunc.then((value) {
+    await AllMobileSensors.initialiseStepCounterSensorFunc.then((value) {
       setState(() {
         isInitialised = value;
         print(isInitialised);
@@ -95,7 +95,7 @@ class _MyAppState extends State<MyApp> {
 
   void initialiseLightSensor() async {
     String isInitialised;
-    await AndroidSensors.initialiseLightSensorFunc.then((value) {
+    await AllMobileSensors.initialiseLightSensorFunc.then((value) {
       setState(() {
         isInitialised = value;
         print(isInitialised);
@@ -158,17 +158,6 @@ class _MyAppState extends State<MyApp> {
                               ? Text("No data found")
                               : Text(
                                   "The third value of sensor is: $typeGameValue3"))),
-                  // StreamBuilder(
-                  //     stream: AndroidSensors.sensorData,
-                  //     builder:
-                  //         (BuildContext context, AsyncSnapshot<double> snapshot) {
-                  //       if (snapshot.hasData) {
-                  //         return Text("The value is ${snapshot.data}");
-                  //       }
-                  //       return Text("No data");
-                  //     }),
-
-                  //Container(child: Text("$typeGameValue")),
                   SizedBox(
                       width: 300,
                       child: MaterialButton(
@@ -189,7 +178,7 @@ class _MyAppState extends State<MyApp> {
                         color: Colors.green[100],
                         textColor: Colors.black,
                         onPressed: () {
-                          AndroidSensors.typeGameReading.then((value) {
+                          AllMobileSensors.typeGameReading.then((value) {
                             setState(() {
                               typeGameValue1 = value[0];
                               typeGameValue2 = value[1];
@@ -218,7 +207,7 @@ class _MyAppState extends State<MyApp> {
                         color: Colors.orange[100],
                         textColor: Colors.black,
                         onPressed: () {
-                          AndroidSensors.gravityReading.then((value) {
+                          AllMobileSensors.gravityReading.then((value) {
                             setState(() {
                               typeGameValue1 = value[0];
                               typeGameValue2 = value[1];
@@ -247,7 +236,7 @@ class _MyAppState extends State<MyApp> {
                         color: Colors.yellow[100],
                         textColor: Colors.black,
                         onPressed: () {
-                          AndroidSensors.accelerometerReading.then((value) {
+                          AllMobileSensors.accelerometerReading.then((value) {
                             setState(() {
                               typeGameValue1 = value[0];
                               typeGameValue2 = value[1];
@@ -276,7 +265,7 @@ class _MyAppState extends State<MyApp> {
                         color: Colors.blue[100],
                         textColor: Colors.black,
                         onPressed: () {
-                          AndroidSensors.gyroscopeReading.then((value) {
+                          AllMobileSensors.gyroscopeReading.then((value) {
                             setState(() {
                               typeGameValue1 = value[0];
                               typeGameValue2 = value[1];
@@ -286,94 +275,6 @@ class _MyAppState extends State<MyApp> {
                         },
                         child: Text("Get Gyroscope Value"),
                       )),
-                  // SizedBox(
-                  //     width: 300,
-                  //     child: MaterialButton(
-                  //         height: 40.0,
-                  //         minWidth: 70.0,
-                  //         color: Colors.orange[100],
-                  //         textColor: Colors.black,
-                  //         onPressed: () {
-                  //           initialiseLinearAccelerationSensor();
-                  //         },
-                  //         child:
-                  //             Text("initialise Linear Acceleration Sensor"))),
-                  // SizedBox(
-                  //     width: 300,
-                  //     child: MaterialButton(
-                  //       height: 40.0,
-                  //       minWidth: 70.0,
-                  //       color: Colors.orange[100],
-                  //       textColor: Colors.black,
-                  //       onPressed: () {
-                  //         AndroidSensors.linearAccelerationReading
-                  //             .then((value) {
-                  //           setState(() {
-                  //             typeGameValue1 = value[0];
-                  //             typeGameValue2 = value[1];
-                  //             typeGameValue3 = value[2];
-                  //           });
-                  //         });
-                  //       },
-                  //       child: Text("Get Linear Acceleration Value"),
-                  //     )),
-                  // SizedBox(
-                  //     width: 300,
-                  //     child: MaterialButton(
-                  //         height: 40.0,
-                  //         minWidth: 70.0,
-                  //         color: Colors.green[100],
-                  //         textColor: Colors.black,
-                  //         onPressed: () {
-                  //           initialiseTypeRotationSensor();
-                  //         },
-                  //         child: Text("initialise Type Rotation Sensor"))),
-                  // SizedBox(
-                  //     width: 300,
-                  //     child: MaterialButton(
-                  //       height: 40.0,
-                  //       minWidth: 70.0,
-                  //       color: Colors.green[100],
-                  //       textColor: Colors.black,
-                  //       onPressed: () {
-                  //         AndroidSensors.typeRotationReading.then((value) {
-                  //           setState(() {
-                  //             typeGameValue1 = value[0];
-                  //             typeGameValue2 = value[1];
-                  //             typeGameValue3 = value[2];
-                  //           });
-                  //         });
-                  //       },
-                  //       child: Text("Get Type Rotation Value"),
-                  //     )),
-                  // SizedBox(
-                  //     width: 300,
-                  //     child: MaterialButton(
-                  //         height: 40.0,
-                  //         minWidth: 70.0,
-                  //         color: Colors.yellow[100],
-                  //         textColor: Colors.black,
-                  //         onPressed: () {
-                  //           initialiseStepCounterSensor();
-                  //         },
-                  //         child: Text("initialise Step Counter Sensor"))),
-                  // SizedBox(
-                  //   width: 300,
-                  //   child: MaterialButton(
-                  //     height: 40.0,
-                  //     minWidth: 70.0,
-                  //     color: Colors.yellow[100],
-                  //     textColor: Colors.black,
-                  //     onPressed: () {
-                  //       AndroidSensors.stepCounterReading.then((value) {
-                  //         setState(() {
-                  //           typeGameValue1 = value[0];
-                  //         });
-                  //       });
-                  //     },
-                  //     child: Text("Get Step Counter Value"),
-                  //   ),
-                  // ),
                   SizedBox(
                       width: 300,
                       child: MaterialButton(
@@ -393,9 +294,11 @@ class _MyAppState extends State<MyApp> {
                         color: Colors.red[100],
                         textColor: Colors.black,
                         onPressed: () {
-                          AndroidSensors.lightReading.then((value) {
+                          AllMobileSensors.lightReading.then((value) {
                             setState(() {
                               typeGameValue1 = value[0];
+                              typeGameValue2 = 0;
+                              typeGameValue3 = 0;
                             });
                           });
                         },
