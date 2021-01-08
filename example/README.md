@@ -1,6 +1,6 @@
-# testandroidsensor2_example
+# androidSensors_example
 
-Demonstrates how to use the testandroidsensor2 plugin.
+Demonstrates how to use the androidSensors plugin.
 
 ## Getting Started
 

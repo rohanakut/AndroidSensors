@@ -1,4 +1,4 @@
-name: testandroidsensor2
+name: androidSensors
 description: A new Flutter plugin.
 version: 0.0.1
 author:
@@ -28,10 +28,10 @@ flutter:
   plugin:
     platforms:
       android:
-        package: com.example.testandroidsensor2
-        pluginClass: Testandroidsensor2Plugin
+        package: com.example.androidSensors
+        pluginClass: AndroidSensorsPlugin
       ios:
-        pluginClass: Testandroidsensor2Plugin
+        pluginClass: AndroidSensorsPlugin
 
   # To add assets to your plugin package, add an assets section, like this:
   # assets:
