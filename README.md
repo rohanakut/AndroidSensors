@@ -10,7 +10,7 @@ This plugin contains implementation of all the Android Sensors available [here](
 
 ## Getting Started
 
-In order to use this package add "" in the pubspec.yaml.
+In order to use this package add "all_mobile_sensors" in the pubspec.yaml.
 
 ## How to use individual sensors
 Currently the implementation of sensors does not support streams. This means continuous sensor values cannot be obtained for a particular sensor. However to obtain the individual values of a sensor perform the following steps:
