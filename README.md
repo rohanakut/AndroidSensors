@@ -11,8 +11,8 @@ This plugin contains implementation of all the Android Sensors available [here](
 
 ## Getting Started
 
-In order to use this package add "all_mobile_sensors" in the pubspec.yaml.
-Import the package as mentioned below:
+1. Add "all_mobile_sensors" in the pubspec.yaml.
+2. Import the package as mentioned below:
 
 ```import 'package:all_mobile_sensors/all_mobile_sensors.dart'```
 
