@@ -14,18 +14,13 @@ This plugin contains implementation of all the Android Sensors available [here](
 In order to use this package add "all_mobile_sensors" in the pubspec.yaml.
 
 ## How to use individual sensors
-Currently the implementation of sensors does not support streams. This means continuous sensor values cannot be obtained for a particular sensor. However to obtain the individual values of a sensor perform the following steps:
-1. Initialise the sensor (the initialisation has to be done just **once)**
-2. Once the sensor is initialised you can get the values of a sensor.
-
-## Demo
 For example if I want to get the values of accelerometer perform the following steps:
 1. Call the function initialiseAccelerometerSensorFunc present in the AllMobileSensor class. Once the sensor is initialised we can get its values whenever we want.
 2. To get the values of the sensor call the function accelerometerReading present in AllMobileSensor class. We will get three values for the accelerometer sensor.
 
-Refer example to see the exact implementation for a few sensors.
+Refer example to see the exact implementation for other sensors.
 
- **To get a list of all sensor functions refer to the file named SensorActivities or look at the functions listed in AllMobileSensors.dart**
+ **To get a list of all sensor functions refer to the file named SensorActivities.txt or refer the functions listed in AllMobileSensors.dart**
 
 ## Things expected in future versions
 1. Streams for every sensor
