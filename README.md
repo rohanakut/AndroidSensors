@@ -19,7 +19,7 @@ Currently the implementation of sensors does not support streams. This means con
 2. Once the sensor is initialised you can get the values of a sensor.
 
 ## Demo
-For example if I want to get the values of accelerometer just once I would perform the following steps:
+For example if I want to get the values of accelerometer perform the following steps:
 1. Call the function initialiseAccelerometerSensorFunc present in the AllMobileSensor class. Once the sensor is initialised we can get its values whenever we want.
 2. To get the values of the sensor call the function accelerometerReading present in AllMobileSensor class. We will get three values for the accelerometer sensor.
 
