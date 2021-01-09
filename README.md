@@ -1,7 +1,7 @@
 ## all_mobile_sensors
 A flutter plugin that enables easy access to all android sensors. The user just has to run a simple function to get the senor values. This plugin enables the user to bypass the native platform specific code and get the sensor value easily for their application.
 
-This plugin contains implementation of all the Android Sensors available [here](https://developer.android.com/guide/topics/sensors). There are a few sensors in this list that I have not implemented. This is because these sensors are mostly not available on a mobile device. However, if the implementation is needed raise an issue so that I can do the same. The sensors not implemented are:
+This plugin contains implementation of all the Android Sensors available [here](https://developer.android.com/guide/topics/sensors). There are a few sensors in this list that have not been implemented. This is because these sensors are mostly not available on a mobile device. However, if the implementation is needed raise an issue so that I can do the same. The sensors not implemented are:
 
 1. Relative Humidity
 2. Pressure Sensor
@@ -11,7 +11,8 @@ This plugin contains implementation of all the Android Sensors available [here](
 
 ## Getting Started
 
-In order to use this package add "all_mobile_sensors" in the pubspec.yaml.
+1. In order to use this package add "all_mobile_sensors" in the pubspec.yaml.
+2. Import <'package:all_mobile_sensors/all_mobile_sensors.dart'> to use this plugin
 
 ## How to use individual sensors
 For example if I want to get the values of accelerometer perform the following steps:
