@@ -1,5 +1,5 @@
 ## all_mobile_sensors
-A flutter plugin that enables easy access to all android sensors. The user just has to run a simple function to get the senor values. This package enables the user to bypass the native platform specific code and get the sensor value easily for their application.
+A flutter plugin that enables easy access to all android sensors. The user just has to run a simple function to get the senor values. This plugin enables the user to bypass the native platform specific code and get the sensor value easily for their application.
 
 This plugin contains implementation of all the Android Sensors available [here](https://developer.android.com/guide/topics/sensors). There are a few sensors in this list that I have not implemented. This is because these sensors are mostly not available on a mobile device. However, if the implementation is needed raise an issue so that I can do the same. The sensors not implemented are:
 
